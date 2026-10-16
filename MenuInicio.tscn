@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://baq2gjvxeydtq"]
+
+[ext_resource type="Texture2D" uid="uid://ddqh78eisgtgh" path="res://assets/fondo/AlanWake2_main_menu_backgroundout.png" id="1_fwttb"]
+[ext_resource type="Script" uid="uid://ph3khaq588se" path="res://menu_inicio.gd" id="1_v4j77"]
+[ext_resource type="AudioStream" uid="uid://61ksx8etysrr" path="res://assets/musica-sonido/Ahti-singing.ogg" id="3_gye3f"]
+
+[node name="MenuInicio" type="Control" unique_id=1815366645]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_v4j77")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=637290132]
+layout_mode = 0
+offset_left = -45.0
+offset_top = -218.0
+offset_right = 1313.0
+offset_bottom = 1006.0
+texture = ExtResource("1_fwttb")
+
+[node name="Start" type="Button" parent="." unique_id=998821501]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 622.0
+offset_right = 832.0
+offset_bottom = 680.0
+theme_override_font_sizes/font_size = 39
+text = "Jugar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1634767157]
+stream = ExtResource("3_gye3f")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
