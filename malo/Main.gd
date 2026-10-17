@@ -21,6 +21,8 @@ func _input(event: InputEvent) -> void:
 			video_game_over.stop()
 			video_game_over.hide()
 			
+			
+			
 		KEY_1:
 			if jugador.monedas >= 15:
 				jugador.monedas -= 15

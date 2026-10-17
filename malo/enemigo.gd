@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 		if _tiempo >= 2.0:
 			_tiempo = 0.0
 			print("!Moho ataca al conserje!")
-			_mov.recibir_dano(10)
+			_mov.recibir_dano(30)
 
 
 func recibir_dano(cantidad: int) -> void:
@@ -42,3 +42,4 @@ func recibir_dano(cantidad: int) -> void:
 func reiniciar() -> void:
 	vida = 300.0
 	position = _inicio
+	show()
